@@ -1,27 +1,29 @@
+'use client';
+
 import { Variants } from 'framer-motion';
 import { motion } from 'framer-motion';
 
-const Header = () => {
-  const container: Variants = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
+export const container: Variants = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.1,
+      staggerChildren: 0.1
     }
   }
-    
-  const item: Variants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1
-    }
+}
+  
+export const item: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
   }
+}
 
+const Header = () => {
   return (
     <motion.div variants={container} initial='hidden' animate='visible'>
       <motion.h1 variants={item} className='xl:text-7xl md:text-6xl text-5xl pulse mt-48'>
