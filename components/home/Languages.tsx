@@ -2,12 +2,12 @@ import LanguageCardComponent from './LanguageCard';
 import { motion } from 'framer-motion';
 import { container } from './Header';
 
-export interface LanguageCard {
+export interface LanguageCardProps {
   icon: string;
   tooltip: string;
 }
 
-const LanguageCardList: LanguageCard[] = [
+const LanguageCardList: LanguageCardProps[] = [
   {
     icon: 'akar-icons:react-fill',
     tooltip: 'React',
@@ -45,13 +45,13 @@ const LanguageCardList: LanguageCard[] = [
     tooltip: 'Laravel',
   },
   {
-    icon: 'simple-icons:spigotmc',
-    tooltip: 'SpigotMC',
-  },
-  {
     icon: 'bxs:paper-plane',
     tooltip: 'PaperMC',
   },
+  {
+    icon: 'bi:unity',
+    tooltip: 'Unity',
+  }
 ];
 
 const Languages = () => {
