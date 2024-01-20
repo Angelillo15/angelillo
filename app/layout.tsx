@@ -13,6 +13,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' className='dark'>
+      <head>
+        <meta property='og:image' content='/preview.png' />
+        <meta property='og:image:width' content='843' />
+        <meta property='og:image:height' content='480' />
+      </head>
       <body>
         <Providers>
           <NavBar />
