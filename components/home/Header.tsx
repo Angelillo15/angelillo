@@ -26,7 +26,7 @@ export const item: Variants = {
 const Header = () => {
   return (
     <motion.div variants={container} initial='hidden' animate='visible'>
-      <motion.h1 variants={item} className='xl:text-7xl md:text-6xl text-5xl pulse mt-48'>
+      <motion.h1 variants={item} className='xl:text-7xl md:text-6xl text-5xl pulse mt-28'>
         Welcome to <span className='purple-glow-gradient'>Angelillo</span>&apos;s site
       </motion.h1>
 
