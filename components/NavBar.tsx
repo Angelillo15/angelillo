@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
@@ -11,6 +10,9 @@ import {
   Tab,
   Tabs,
 } from '@nextui-org/react';
+import Avatar from '@/assets/avatar.jpeg';
+import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
@@ -31,24 +33,19 @@ export const navItems: NavItem[] = [
     href: '/resources',
     key: 'resources'
   },
-  {
-    title: 'About',
-    href: '/about',
-    key: 'about'
-  }
 ];
 
 const NavBar = () => {
   const [key, setKey] = useState('home');
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const router = useRouter();
   const useNavigate = useRouter().push;
   const pathname = usePathname();
 
   useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
+    if (isMenuOpen)
+      setMenuOpen(false);
+  }, [pathname, isMenuOpen]);
   
 
   useEffect(() => {
@@ -57,15 +54,16 @@ const NavBar = () => {
         setKey(item.key);
       }
     });
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     navItems.forEach((item) => {
       if (item.key === key) {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         useNavigate(item.href);
       }
     });
-  }, [key]);
+  }, [key, useNavigate]);
 
   return (
     <Navbar className='bg-transparent' onMenuOpenChange={setMenuOpen} isMenuOpen={isMenuOpen}>
@@ -83,7 +81,7 @@ const NavBar = () => {
       )}
 
       <NavbarBrand>
-        <img src='/img/avatar.jpeg' alt='Angelillo15 foto' className='max-w-12 rounded-full mr-2' />
+        <Image src={Avatar} alt='Angelillo15 foto' className='max-w-12 rounded-full mr-2' />
         Angelillo15
       </NavbarBrand>
 
