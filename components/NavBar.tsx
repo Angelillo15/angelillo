@@ -14,7 +14,7 @@ import Avatar from '@/assets/avatar.jpeg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 export interface NavItem {
   title: string;
@@ -26,12 +26,12 @@ export const navItems: NavItem[] = [
   {
     title: 'Home',
     href: '/',
-    key: 'home'
+    key: 'home',
   },
   {
     title: 'Resources',
     href: '/resources',
-    key: 'resources'
+    key: 'resources',
   },
 ];
 
@@ -41,13 +41,11 @@ const NavBar = () => {
 
   const useNavigate = useRouter().push;
   const pathname = usePathname();
-  
+
   useEffect(() => {
-    if (isMenuOpen)
-      setMenuOpen(false);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (isMenuOpen) setMenuOpen(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
-  
 
   useEffect(() => {
     navItems.forEach((item) => {
