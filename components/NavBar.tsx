@@ -14,7 +14,7 @@ import Avatar from '@/assets/avatar.jpeg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export interface NavItem {
   title: string;
@@ -41,11 +41,12 @@ const NavBar = () => {
 
   const useNavigate = useRouter().push;
   const pathname = usePathname();
-
+  
   useEffect(() => {
     if (isMenuOpen)
       setMenuOpen(false);
-  }, [pathname, isMenuOpen]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
   
 
   useEffect(() => {
