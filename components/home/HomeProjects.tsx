@@ -41,7 +41,7 @@ const HomeProjects = () => {
           <h2 className='font-semibold text-2xl md:text-4xl'>Creating Minecraft plugins</h2>
           <p className='md:mt-6 md:text-xl text-gray-900 dark:text-gray-100 mt-3'>
             I&apos;m a Minecraft plugin developer, I have been developing plugins for 3 years, I have a lot of experience in
-            this sector. I&apos;m currently working on <span className='purple-glow-gradient'> MAStaff </span> and
+            this sector. I&apos;m currently working on <span className='purple-glow-gradient'> MAStaff </span> and my brand new
             <span className='red-glow-gradient'> Nookure Chat</span>.
           </p>
           <div className='flex flex-row gap-4 mt-8'>
@@ -68,7 +68,7 @@ const HomeProjects = () => {
           <p className='md:mt-6 md:text-xl text-gray-900 dark:text-gray-100 mt-3'>
             I&apos;m glad to say that I lead the Open Source development of Pterodactyl Themes, I have projects like
             <span className='red-glow-gradient'> NookTheme</span> or mor simple themes that works on every version of
-            pterodactyl like <span className='purple-glow-gradient'>Ice Minecraft theme</span>
+            pterodactyl like <span className='purple-glow-gradient'>Ice Minecraft theme</span>.
           </p>
           <div className='flex flex-row gap-4 mt-8'>
             <Button color='secondary' href='/resoruces'>
