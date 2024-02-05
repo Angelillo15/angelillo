@@ -39,6 +39,34 @@
   animation: gradient 5s ease infinite;
 }
 
+.blue-glow-gradient {
+  background: #456da8;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #3258aa 0%,
+    #607dbd 50%,
+    #3258aa 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+}
+
+.green-glow-gradient {
+  background: #27d845;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #43e04b 0%,
+    rgb(18, 150, 88) 50%,
+    #43e04b 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+}
+
 .pulse {
   position: relative;
   z-index: -1;
