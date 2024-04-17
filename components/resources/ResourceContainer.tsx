@@ -10,7 +10,7 @@ import { container } from '@/components/home/Header';
 const resources = [
   {
     title: 'MAStaff',
-    description: 'A simple staff plugin for your server.',
+    description: 'A simple staff plugin for your server, with a lot of features and .',
     image: MAStaff,
     button: 'Download',
     href: 'https://builtbybit.com/resources/mastaff-staffmode-utils.25460/',

@@ -1,5 +1,5 @@
 import { Button } from '@nextui-org/react';
-import Image from 'next/image';
+import Image  from 'next-image-export-optimizer';
 import MAStaffImage from '@/assets/plugins/mastaff.png';
 import NookTheme from '@/assets/themes/nooktheme.png';
 import { Variants, motion } from 'framer-motion';

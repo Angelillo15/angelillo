@@ -11,7 +11,7 @@ import {
   Tabs,
 } from '@nextui-org/react';
 import Avatar from '@/assets/avatar.jpeg';
-import Image from 'next/image';
+import Image  from 'next-image-export-optimizer';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
