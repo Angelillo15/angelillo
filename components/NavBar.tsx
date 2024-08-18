@@ -11,7 +11,7 @@ import {
   Tabs,
 } from '@nextui-org/react';
 import Avatar from '@/assets/avatar.jpeg';
-import Image  from 'next-image-export-optimizer';
+import Image from 'next-image-export-optimizer';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
@@ -80,8 +80,10 @@ const NavBar = () => {
       )}
 
       <NavbarBrand>
-        <Image src={Avatar} alt='Angelillo15 foto' className='max-w-12 rounded-full mr-2' />
-        Angelillo15
+        <Link href='/' className='flex flex-row items-center align-middle'>
+          <Image src={Avatar} alt='Angelillo15 foto' className='max-w-12 rounded-full mr-2' />
+          Angelillo15
+        </Link>
       </NavbarBrand>
 
       <NavbarContent justify='center' className='md:flex hidden'>
