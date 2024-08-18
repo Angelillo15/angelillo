@@ -1,6 +1,6 @@
 'use client';
 import ResourceCard, { ResourceCardProps } from '@/components/resources/ResourceCard';
-import MAStaff from '@/assets/plugins/mastaff.png';
+import NookureStaff from '@/assets/plugins/nookurestaff.jpg';
 import NookTheme from '@/assets/themes/nooktheme.png';
 import Ice from '@/assets/themes/ice.png';
 import Purple from '@/assets/themes/purple.png';
@@ -9,9 +9,9 @@ import { container } from '@/components/home/Header';
 
 const resources = [
   {
-    title: 'MAStaff',
-    description: 'A simple staff plugin for your server, with a lot of features and .',
-    image: MAStaff,
+    title: 'NookureStaff',
+    description: 'The most advanced staff utils plugin made for large and small servers in mind.',
+    image: NookureStaff,
     button: 'Download',
     href: 'https://builtbybit.com/resources/mastaff-staffmode-utils.25460/',
   },

@@ -1,6 +1,6 @@
 import { Button } from '@nextui-org/react';
 import Image  from 'next-image-export-optimizer';
-import MAStaffImage from '@/assets/plugins/mastaff.png';
+import NookureStaff from '@/assets/plugins/nookurestaff.jpg';
 import NookTheme from '@/assets/themes/nooktheme.png';
 import { Variants, motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
@@ -39,25 +39,26 @@ const HomeProjects = () => {
       <motion.div variants={item} className='flex flex-col gap-6 md:flex-row-reverse md:gap-8 xl:gap-24 items-center'>
         <div className='w-full flex-1 rounded-xl bg-gray-900 aspect-video relative overflow-clip'>
           <Image
-            alt=''
-            src={MAStaffImage}
+            alt='Nookure Staff header image'
+            src={NookureStaff}
             placeholder='blur'
             fill
             sizes='(min-width: 80rem) 40rem, (min-width: 768px) 40vw, 100vw'
             className='object-cover'
+            loading='lazy'
           />
         </div>
         <div className='flex-1'>
           <h2 className='font-semibold text-2xl md:text-4xl'>Creating Minecraft plugins</h2>
           <p className='md:mt-6 md:text-xl text-gray-900 dark:text-gray-100 mt-3'>
-            I&apos;m a Minecraft plugin developer, I have been developing plugins for 3 years, I have a lot of
+            I&apos;m a Minecraft plugin developer, I have been developing plugins for 4 years, I have a lot of
             experience in this sector. I&apos;m currently working on{' '}
             <Link
               href={'https://builtbybit.com/resources/mastaff-staffmode-utils.25460/'}
               className='purple-glow-gradient'
             >
               {' '}
-              MAStaff{' '}
+              NookureStaff{' '}
             </Link>{' '}
             and my brand new
             <Link href={'https://github.com/Nookure/NookureChat'} className='red-glow-gradient'>
@@ -82,12 +83,13 @@ const HomeProjects = () => {
       <motion.div variants={item} className='flex flex-col gap-6 md:flex-row md:gap-8 xl:gap-24 items-center'>
         <div className='w-full flex-1 rounded-xl bg-gray-900 aspect-video relative overflow-clip'>
           <Image
-            alt=''
+            alt='NookTheme server view'
             src={NookTheme}
             placeholder='blur'
             fill
             sizes='(min-width: 80rem) 40rem, (min-width: 768px) 40vw, 100vw'
             className='object-cover'
+            loading='lazy'
           />
         </div>
         <div className='flex-1'>
